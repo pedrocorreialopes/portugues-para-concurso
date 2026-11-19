@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redação — Português para Concursos</title>
+  <meta name="description" content="Área de redação para concursos: temas atuais com textos motivadores, modelos de introdução, desenvolvimento e conclusão, técnicas argumentativas, conectivos, editor com contador de palavras e autoavaliação.">
+  <meta name="theme-color" content="#0b2545">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="siteHeader"></div>
+
+  <main id="conteudo">
+    <section class="section" style="padding-bottom:1rem">
+      <div class="container">
+        <nav aria-label="Trilha de navegação" style="font-size:.84rem;color:var(--muted);margin-bottom:.8rem">
+          <a href="index.html">Início</a> <span aria-hidden="true">›</span> <span>Redação</span>
+        </nav>
+        <div class="section-head" style="max-width:none">
+          <span class="eyebrow">Módulo de redação</span>
+          <h1>Treine redação com método e autoavaliação</h1>
+          <p class="lead">Escolha um tema, leia os textos motivadores e o repertório sugerido, escreva no editor com contador de palavras e avalie seu texto com a rubrica de gramática, coesão, coerência, argumentação e estrutura.</p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Seções de redação">
+          <button class="tab active" role="tab" data-tab="temas" aria-selected="true">Temas para redação</button>
+          <button class="tab" role="tab" data-tab="tecnica" aria-selected="false">Técnicas e estrutura</button>
+          <button class="tab" role="tab" data-tab="repertorio" aria-selected="false">Conectivos e repertório</button>
+          <button class="tab" role="tab" data-tab="editor" aria-selected="false">Editor de redação</button>
+          <button class="tab" role="tab" data-tab="minhas" aria-selected="false">Minhas redações</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" style="padding-bottom:3rem">
+      <!-- TEMAS -->
+      <section id="tab-temas" class="tab-panel">
+        <div class="filter-bar" style="margin-bottom:1.2rem">
+          <div class="search-input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+            <input class="input" type="search" id="buscaTema" placeholder="Buscar tema…" aria-label="Buscar tema de redação">
+          </div>
+          <select class="select" id="filtroCategoria" aria-label="Filtrar por categoria"><option value="">Todas as categorias</option></select>
+        </div>
+        <div class="grid grid-2" id="temasGrid"></div>
+      </section>
+
+      <!-- TÉCNICAS -->
+      <section id="tab-tecnica" class="tab-panel" hidden>
+        <div class="grid grid-2">
+          <article class="card">
+            <h2 style="font-size:1.2rem">Estrutura do texto dissertativo-argumentativo</h2>
+            <h3 style="font-size:1rem;margin-top:1rem">Introdução (1 parágrafo)</h3>
+            <p style="font-size:.93rem;color:var(--text-soft)">Contextualização (repertório, dado, referência) → delimitação do tema → tese clara. Evite repetir o enunciado.</p>
+            <div class="info-box box-example" style="margin:.8rem 0">
+              <h4>Modelo de introdução</h4>
+              <p style="font-size:.92rem;margin:0">"Segundo a Constituição Federal de 1988, a educação é direito de todos e dever do Estado. No entanto, [situação-problema específica]. Diante disso, é imprescindível que [ação/posicionamento] para que [finalidade]."</p>
+            </div>
+            <h3 style="font-size:1rem;margin-top:1.2rem">Desenvolvimento (2 parágrafos)</h3>
+            <p style="font-size:.93rem;color:var(--text-soft)">Um argumento por parágrafo, com repertório, explicação e exemplo. Cada parágrafo começa com um tópico frasal.</p>
+            <div class="info-box box-example" style="margin:.8rem 0">
+              <h4>Modelo de parágrafo de desenvolvimento</h4>
+              <p style="font-size:.92rem;margin:0">"Em primeiro lugar, [argumento]. Isso ocorre porque [explicação do mecanismo]. Como exemplo, [dado, lei, obra ou fato]. Dessa forma, [conclusão parcial que retoma a tese]."</p>
+            </div>
+            <h3 style="font-size:1rem;margin-top:1.2rem">Conclusão (1 parágrafo)</h3>
+            <p style="font-size:.93rem;color:var(--text-soft)">Retomada da tese + proposta de intervenção com agente, ação, meio, finalidade e detalhamento.</p>
+            <div class="info-box box-example" style="margin:.8rem 0">
+              <h4>Modelo de conclusão</h4>
+              <p style="font-size:.92rem;margin:0">"Portanto, [retomada]. Cabe ao [agente] [ação], por meio de [meio], a fim de [finalidade]. Assim, [resultado esperado]."</p>
+            </div>
+          </article>
+
+          <div>
+            <article class="card" style="margin-bottom:1.15rem">
+              <h2 style="font-size:1.15rem">Cinco técnicas argumentativas</h2>
+              <h3 style="font-size:.95rem;margin-top:.9rem">1. Argumento de autoridade</h3>
+              <p style="font-size:.9rem;color:var(--text-soft);margin-bottom:.6rem">Citar lei, autor, instituição ou dado oficial. Não invente fontes — use apenas o que você conhece.</p>
+              <h3 style="font-size:.95rem">2. Argumento por exemplificação</h3>
+              <p style="font-size:.9rem;color:var(--text-soft);margin-bottom:.6rem">Trazer um caso concreto que comprova a tese.</p>
+              <h3 style="font-size:.95rem">3. Argumento por causa e consequência</h3>
+              <p style="font-size:.9rem;color:var(--text-soft);margin-bottom:.6rem">Mostrar a relação entre um fator e seu efeito social.</p>
+              <h3 style="font-size:.95rem">4. Argumento por comparação</h3>
+              <p style="font-size:.9rem;color:var(--text-soft);margin-bottom:.6rem">Contrastar situações, regiões ou períodos históricos.</p>
+              <h3 style="font-size:.95rem">5. Refutação</h3>
+              <p style="font-size:.9rem;color:var(--text-soft);margin-bottom:0">Antecipar e responder ao argumento contrário, fortalecendo a própria tese.</p>
+            </article>
+
+            <article class="card">
+              <h2 style="font-size:1.15rem">Erros que custam pontos</h2>
+              <ul style="font-size:.92rem;color:var(--text-soft);margin-bottom:0">
+                <li>Fugir do tema ou do tipo textual pedido.</li>
+                <li>Escrever menos de 20 ou mais de 30 linhas (varia por banca).</li>
+                <li>Falta de proposta de intervenção quando exigida.</li>
+                <li>Uso de 1ª pessoa e de opinião sem fundamentação.</li>
+                <li>Citações sem conexão com o argumento.</li>
+                <li>Períodos muito longos, com vírgulas mal colocadas.</li>
+                <li>Repetir ideias com palavras diferentes (circularidade).</li>
+                <li>Desrespeitar os direitos humanos na proposta.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONECTIVOS / REPERTÓRIO -->
+      <section id="tab-repertorio" class="tab-panel" hidden>
+        <div class="grid grid-2">
+          <article class="card">
+            <h2 style="font-size:1.2rem">Conectivos por função</h2>
+            <div id="tabelaConectivos"></div>
+            <div class="info-box box-warn" style="margin-top:1rem">
+              <h4>Não empilhe conectivos</h4>
+              <p style="margin:0;font-size:.9rem">Um conectivo por parágrafo bem colocado vale mais do que três na mesma frase.</p>
+            </div>
+          </article>
+          <div>
+            <article class="card" style="margin-bottom:1.15rem">
+              <h2 style="font-size:1.15rem">Repertório legitimado por área</h2>
+              <p class="muted" style="font-size:.85rem">Use apenas repertório que você domina: é melhor citar bem uma referência do que listar cinco de forma vaga.</p>
+              <div class="grid" style="gap:.7rem;margin-top:.8rem">
+                <div><strong style="font-size:.92rem">Constituição e legislação</strong><p class="muted" style="font-size:.86rem;margin:.2rem 0 0">CF/1988 (arts. 5º, 6º, 37, 205, 225, 196); LDB; ECA; Lei de Acesso à Informação; LGPD; Lei de Cotas; marco do saneamento.</p></div>
+                <div><strong style="font-size:.92rem">Sociologia e filosofia</strong><p class="muted" style="font-size:.86rem;margin:.2rem 0 0">Bauman (modernidade líquida); Byung-Chul Han (sociedade do cansaço); Hannah Arendt (banalidade do mal, esfera pública); Paulo Freire (educação crítica); Milton Santos (cidadania e território).</p></div>
+                <div><strong style="font-size:.92rem">Dados e organismos</strong><p class="muted" style="font-size:.86rem;margin:.2rem 0 0">IBGE, IPEA, INEP, OMS, ONU/ODS, OIT. Cite sempre de forma aproximada e honesta se não souber o número exato.</p></div>
+                <div><strong style="font-size:.92rem">Literatura e artes</strong><p class="muted" style="font-size:.86rem;margin:.2rem 0 0">Machado de Assis, Graciliano Ramos, Carolina Maria de Jesus, Conceição Evaristo; obras que dialoguem com desigualdade, memória e cidade.</p></div>
+              </div>
+            </article>
+            <article class="card">
+              <h2 style="font-size:1.15rem">Exemplo de conclusão com proposta completa</h2>
+              <p style="font-size:.92rem;color:var(--text-soft)">"Portanto, é necessário que o poder público, em parceria com escolas e famílias, amplie a educação midiática desde o ensino fundamental, por meio de projetos interdisciplinares e formação continuada de professores, a fim de que os estudantes desenvolvam leitura crítica das informações que recebem. Dessa forma, a cidadania digital deixará de ser exceção e passará a ser prática cotidiana."</p>
+              <ul style="font-size:.86rem;color:var(--muted);margin-bottom:0">
+                <li><strong>Agente:</strong> poder público, escolas e famílias</li>
+                <li><strong>Ação:</strong> ampliar a educação midiática</li>
+                <li><strong>Meio:</strong> projetos interdisciplinares e formação docente</li>
+                <li><strong>Finalidade:</strong> desenvolver leitura crítica</li>
+                <li><strong>Detalhamento:</strong> desde o ensino fundamental</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDITOR -->
+      <section id="tab-editor" class="tab-panel" hidden>
+        <div class="grid" style="grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:1.2rem" id="editorGrid">
+          <div class="card">
+            <div class="field" style="margin-bottom:1rem">
+              <label for="selTemaEditor">Tema da redação</label>
+              <select class="select" id="selTemaEditor"></select>
+            </div>
+            <div class="field" style="margin-bottom:.6rem">
+              <label for="tituloRedacao">Título (opcional)</label>
+              <input class="input" type="text" id="tituloRedacao" placeholder="Dê um título ao seu texto" maxlength="140">
+            </div>
+            <div class="editor-toolbar" role="toolbar" aria-label="Formatação do texto">
+              <button type="button" data-cmd="bold"><strong>B</strong></button>
+              <button type="button" data-cmd="italic"><em>I</em></button>
+              <button type="button" data-cmd="insertUnorderedList">• Lista</button>
+              <span style="margin-left:auto;font-size:.8rem;color:var(--muted)" id="contadorInline">0 palavras · 0 caracteres</span>
+            </div>
+            <textarea class="textarea essay-area" id="textoRedacao" placeholder="Escreva sua redação aqui. Estrutura sugerida: introdução com tese, dois parágrafos de desenvolvimento e conclusão com proposta de intervenção." style="border-radius:0 0 8px 8px;border-top:0"></textarea>
+            <div style="display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:.8rem;justify-content:space-between">
+              <div class="muted" style="font-size:.82rem">
+                <span id="contLinhas">0 linhas estimadas</span> ·
+                <span id="contParagrafos">0 parágrafos</span>
+              </div>
+              <div class="btn-row">
+                <button class="btn btn-sm btn-outline" type="button" id="btnLimparTexto">Limpar</button>
+                <button class="btn btn-sm btn-primary" type="button" id="btnSalvarRedacao">Salvar redação</button>
+              </div>
+            </div>
+            <p class="muted" style="font-size:.78rem;margin:.9rem 0 0">Suas redações são salvas neste navegador, associadas ao seu progresso (conta ou visitante). Nada é enviado para servidores externos.</p>
+          </div>
+
+          <div>
+            <div class="card" style="margin-bottom:1.15rem">
+              <h2 style="font-size:1.05rem">Proposta do tema</h2>
+              <div id="propostaTema" style="font-size:.9rem;color:var(--text-soft)"></div>
+            </div>
+            <div class="card">
+              <h2 style="font-size:1.05rem">Autoavaliação</h2>
+              <p class="muted" style="font-size:.84rem">Atribua uma nota de 0 a 4 em cada critério. A ferramenta soma os pontos e indica onde melhorar.</p>
+              <div id="rubrica"></div>
+              <button class="btn btn-primary btn-block" type="button" id="btnAvaliar" style="margin-top:1rem">Calcular autoavaliação</button>
+              <div id="resultadoAvaliacao"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MINHAS REDAÇÕES -->
+      <section id="tab-minhas" class="tab-panel" hidden>
+        <div id="minhasRedacoes"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="js/core.js"></script>
+  <script src="js/data/modules-1.js"></script>
+  <script src="js/data/modules-2.js"></script>
+  <script src="js/data/modules-3.js"></script>
+  <script src="js/data/questions-1.js"></script>
+  <script src="js/data/questions-2.js"></script>
+  <script src="js/data/questions-3.js"></script>
+  <script src="js/data/tips.js"></script>
+  <script src="js/data/redacao.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/redacao.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dicas de Português — Português para Concursos</title>
+  <meta name="description" content="Dicas rápidas de Português para concursos: crase, mas e mais, há e a, uso dos porquês, vírgula, concordância verbal, erros frequentes e palavras que causam dúvidas.">
+  <meta name="theme-color" content="#0b2545">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="siteHeader"></div>
+
+  <main id="conteudo">
+    <section class="section" style="padding-bottom:1.2rem">
+      <div class="container">
+        <nav aria-label="Trilha de navegação" style="font-size:.84rem;color:var(--muted);margin-bottom:.8rem">
+          <a href="index.html">Início</a> <span aria-hidden="true">›</span> <span>Dicas de Português</span>
+        </nav>
+        <div class="section-head" style="max-width:none">
+          <span class="eyebrow">Dicas de Português</span>
+          <h1>Dicas rápidas para revisar em minutos</h1>
+          <p class="lead">Cada dica traz a regra, um teste prático e exemplos. Use para revisar na véspera da prova, tirar dúvidas pontuais ou compartilhar com quem também está estudando.</p>
+          <p id="dicaDoDia" style="font-size:.86rem;color:var(--muted)"></p>
+        </div>
+
+        <div class="filter-bar" style="margin-bottom:1.2rem">
+          <div class="search-input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+            <input class="input" type="search" id="buscaDica" placeholder="Buscar dica (ex.: crase, vírgula, porquê)…" aria-label="Buscar dica">
+          </div>
+          <select class="select" id="filtroDicaCat" aria-label="Filtrar por categoria"><option value="">Todas as categorias</option></select>
+          <button class="btn btn-ghost btn-sm" type="button" id="limparDica">Limpar</button>
+        </div>
+
+        <div id="listaDicas" class="grid grid-2"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="js/core.js"></script>
+  <script src="js/data/modules-1.js"></script>
+  <script src="js/data/modules-2.js"></script>
+  <script src="js/data/modules-3.js"></script>
+  <script src="js/data/questions-1.js"></script>
+  <script src="js/data/questions-2.js"></script>
+  <script src="js/data/questions-3.js"></script>
+  <script src="js/data/tips.js"></script>
+  <script src="js/data/redacao.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/dicas.js"></script>
+</body>
+</html>

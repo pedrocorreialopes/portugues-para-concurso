@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conteúdos — Português para Concursos</title>
+  <meta name="description" content="Os 30 módulos de Língua Portuguesa para concursos: interpretação de textos, ortografia, acentuação, hífen, morfologia, sintaxe, concordância, regência, crase, pontuação, redação oficial e mais.">
+  <meta name="theme-color" content="#0b2545">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="siteHeader"></div>
+
+  <main id="conteudo">
+    <section class="section" style="padding-bottom:1.4rem">
+      <div class="container">
+        <nav aria-label="Trilha de navegação" style="font-size:.84rem;color:var(--muted);margin-bottom:.8rem">
+          <a href="index.html">Início</a> <span aria-hidden="true">›</span> <span>Conteúdos</span>
+        </nav>
+        <div class="section-head" style="max-width:none">
+          <span class="eyebrow">Conteúdo programático</span>
+          <h1>Todos os conteúdos de Língua Portuguesa</h1>
+          <p class="lead">Trinta módulos completos, organizados em seis áreas. Cada aula traz introdução, explicação detalhada, exemplos práticos, regras gramaticais, dicas para concursos, erros comuns, resumo, exercícios e gabarito comentado.</p>
+        </div>
+
+        <div class="filter-bar" style="margin-bottom:1.4rem">
+          <div class="search-input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+            <input class="input" type="search" id="filtroBusca" placeholder="Buscar assunto (ex.: crase, vírgula, verbo)…" aria-label="Buscar assunto">
+          </div>
+          <select class="select" id="filtroGrupo" aria-label="Filtrar por área"></select>
+          <select class="select" id="filtroStatus" aria-label="Filtrar por status de estudo">
+            <option value="">Todos os status</option>
+            <option value="nao-iniciado">Não iniciados</option>
+            <option value="em-andamento">Em andamento</option>
+            <option value="concluida">Concluídos</option>
+            <option value="favoritos">Favoritos</option>
+          </select>
+          <button class="btn btn-ghost btn-sm" type="button" id="limparFiltros">Limpar</button>
+        </div>
+
+        <div id="resumoFiltro" class="muted" style="font-size:.88rem;margin-bottom:1rem"></div>
+        <div class="grid grid-3" id="modulosGrid"></div>
+        <div id="vazio" hidden></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Como estudar</span>
+          <h2>Sequência recomendada para a sua preparação</h2>
+        </div>
+        <div class="grid grid-4">
+          <div class="card"><span class="badge badge-blue">Etapa 1</span><h3 style="font-size:1.02rem;margin-top:.6rem">Fundamentos</h3><p style="font-size:.9rem;color:var(--muted);margin:0">Leitura, interpretação, tipologia e gêneros textuais. Módulos 1 a 3.</p></div>
+          <div class="card"><span class="badge badge-blue">Etapa 2</span><h3 style="font-size:1.02rem;margin-top:.6rem">Norma escrita</h3><p style="font-size:.9rem;color:var(--muted);margin:0">Ortografia, acentuação e hífen. Módulos 4 e 6.</p></div>
+          <div class="card"><span class="badge badge-blue">Etapa 3</span><h3 style="font-size:1.02rem;margin-top:.6rem">Morfossintaxe</h3><p style="font-size:.9rem;color:var(--muted);margin:0">Classes de palavras, concordância, regência, crase e pontuação. Módulos 7 a 24.</p></div>
+          <div class="card"><span class="badge badge-blue">Etapa 4</span><h3 style="font-size:1.02rem;margin-top:.6rem">Texto e redação oficial</h3><p style="font-size:.9rem;color:var(--muted);margin:0">Coesão, semântica, reescrita e redação oficial. Módulos 25 a 30.</p></div>
+        </div>
+        <div class="btn-row" style="margin-top:1.4rem">
+          <a class="btn btn-primary" href="progresso.html#plano">Montar meu plano de estudos</a>
+          <a class="btn btn-outline" href="simulados.html">Testar meus conhecimentos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="js/core.js"></script>
+  <script src="js/data/modules-1.js"></script>
+  <script src="js/data/modules-2.js"></script>
+  <script src="js/data/modules-3.js"></script>
+  <script src="js/data/questions-1.js"></script>
+  <script src="js/data/questions-2.js"></script>
+  <script src="js/data/questions-3.js"></script>
+  <script src="js/data/tips.js"></script>
+  <script src="js/data/redacao.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/conteudos.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrar — Português para Concursos</title>
+  <meta name="description" content="Entre na sua conta gratuita para salvar progresso, favoritos, redações e resultados de simulados neste dispositivo.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b2545">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="siteHeader"></div>
+
+  <main id="conteudo">
+    <div class="container auth-wrap">
+      <div class="auth-card">
+        <img class="auth-logo" src="images/logo.svg" alt="Logo Português para Concursos" width="54" height="54">
+        <h1>Entrar na minha conta</h1>
+        <p class="muted" style="font-size:.92rem">A conta é opcional: todo o conteúdo é público. Com conta, você mantém seu progresso identificado neste dispositivo.</p>
+
+        <form id="formLogin" novalidate style="margin-top:1.4rem">
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input class="input" type="email" id="email" name="email" autocomplete="username" placeholder="seu@email.com" required>
+          </div>
+          <div class="field">
+            <label for="senha">Senha</label>
+            <input class="input" type="password" id="senha" name="senha" autocomplete="current-password" placeholder="Sua senha" required>
+          </div>
+          <div id="erroLogin" hidden></div>
+          <button class="btn btn-primary btn-block btn-lg" type="submit">Entrar</button>
+        </form>
+
+        <p style="font-size:.88rem;margin-top:1.1rem;text-align:center">
+          <a href="#" id="linkEsqueci">Esqueci minha senha</a>
+        </p>
+        <hr>
+        <p style="font-size:.9rem;text-align:center;margin:0">
+          Não tem conta? <a href="cadastro.html">Criar conta grátis</a>
+        </p>
+      </div>
+    </div>
+
+    <section class="section section-alt" style="margin-top:0">
+      <div class="container container-narrow">
+        <div class="info-box box-tip">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5V7.8a4 4 0 0 1 8 0v2.7"/><rect x="4.5" y="10.5" width="15" height="10.5" rx="2.5"/></svg> Como funciona a conta desta plataforma</h4>
+          <p style="font-size:.9rem">Esta é uma plataforma educacional aberta, sem servidor de cadastro. A conta e o progresso ficam salvos <strong>somente no seu navegador</strong> (armazenamento local), o que significa:</p>
+          <ul style="font-size:.9rem">
+            <li>Não coletamos e não enviamos seus dados para servidores externos.</li>
+            <li>A senha é guardada de forma não legível (resumo por função de hash), nunca em texto puro.</li>
+            <li>Se você limpar os dados do navegador ou trocar de dispositivo, o progresso local não é recuperado pelo site.</li>
+            <li>Você pode usar todo o conteúdo sem criar conta — o cadastro é opcional.</li>
+          </ul>
+          <p style="font-size:.9rem;margin-bottom:0">Para uma recuperação de senha, como não há envio de e-mail, você pode redefinir sua senha local informando o e-mail cadastrado neste dispositivo.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="js/core.js"></script>
+  <script src="js/data/modules-1.js"></script>
+  <script src="js/data/modules-2.js"></script>
+  <script src="js/data/modules-3.js"></script>
+  <script src="js/data/questions-1.js"></script>
+  <script src="js/data/questions-2.js"></script>
+  <script src="js/data/questions-3.js"></script>
+  <script src="js/data/tips.js"></script>
+  <script src="js/data/redacao.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/auth.js"></script>
+</body>
+</html>

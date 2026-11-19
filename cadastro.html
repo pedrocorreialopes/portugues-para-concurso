@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Criar conta grátis — Português para Concursos</title>
+  <meta name="description" content="Cadastro gratuito por e-mail e senha para salvar seu progresso de estudos. Sem planos, sem cobranças, sem área premium.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b2545">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="siteHeader"></div>
+
+  <main id="conteudo">
+    <div class="container auth-wrap">
+      <div class="auth-card">
+        <img class="auth-logo" src="images/logo.svg" alt="Logo Português para Concursos" width="54" height="54">
+        <h1>Criar conta grátis</h1>
+        <p class="muted" style="font-size:.92rem">O cadastro é opcional e totalmente gratuito. Não existe plano pago, assinatura ou área premium nesta plataforma.</p>
+
+        <form id="formCadastro" novalidate style="margin-top:1.4rem">
+          <div class="field">
+            <label for="nome">Nome completo</label>
+            <input class="input" type="text" id="nome" name="nome" autocomplete="name" placeholder="Como você quer ser chamado" required>
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input class="input" type="email" id="email" name="email" autocomplete="email" placeholder="seu@email.com" required>
+          </div>
+          <div class="field">
+            <label for="senha">Senha</label>
+            <input class="input" type="password" id="senha" name="senha" autocomplete="new-password" placeholder="Mínimo de 6 caracteres" minlength="6" required>
+            <p class="hint" id="forcaSenha">Use pelo menos 6 caracteres.</p>
+          </div>
+          <div class="field">
+            <label for="senha2">Confirmar senha</label>
+            <input class="input" type="password" id="senha2" name="senha2" autocomplete="new-password" placeholder="Repita a senha" required>
+          </div>
+          <div class="field">
+            <label class="checkbox-row" for="aceite">
+              <input type="checkbox" id="aceite" required>
+              <span>Li e concordo com o tratamento dos meus dados descrito abaixo e com o uso do meu progresso neste dispositivo. <a href="sobre.html#lgpd">Saiba mais sobre privacidade e LGPD</a>.</span>
+            </label>
+          </div>
+          <div id="erroCadastro" hidden></div>
+          <button class="btn btn-primary btn-block btn-lg" type="submit">Criar minha conta grátis</button>
+        </form>
+
+        <hr>
+        <p style="font-size:.9rem;text-align:center;margin:0">
+          Já tem conta? <a href="login.html">Entrar</a>
+        </p>
+      </div>
+    </div>
+
+    <section class="section section-alt" style="margin-top:0">
+      <div class="container container-narrow">
+        <div class="info-box box-tip">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg> Privacidade em primeiro lugar</h4>
+          <p style="font-size:.9rem">Esta plataforma não possui servidor de cadastro nem banco de dados de usuários. Nome, e-mail e senha ficam armazenados apenas no seu navegador:</p>
+          <ul style="font-size:.9rem">
+            <li><strong>Finalidade:</strong> identificar seu progresso de estudos neste dispositivo.</li>
+            <li><strong>Base legal (LGPD):</strong> consentimento do titular, manifestado no aceite acima.</li>
+            <li><strong>Compartilhamento:</strong> nenhum. Não há envio de dados a terceiros, nem cookies de publicidade.</li>
+            <li><strong>Segurança:</strong> a senha é armazenada como resumo por função de hash, não em texto puro. Ainda assim, não reutilize senhas de outros serviços.</li>
+            <li><strong>Seus direitos:</strong> você pode alterar a senha, sair da conta e apagar todo o progresso em <a href="progresso.html">Meu Progresso</a>, além de remover os dados do navegador a qualquer momento.</li>
+          </ul>
+          <p style="font-size:.9rem;margin-bottom:0">Como os dados vivem no seu navegador, eles não são recuperáveis pelo site se você limpar o armazenamento ou trocar de aparelho.</p>
+        </div>
+        <div class="btn-row" style="margin-top:1.2rem;justify-content:center">
+          <a class="btn btn-outline" href="conteudos.html">Estudar sem criar conta</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="js/core.js"></script>
+  <script src="js/data/modules-1.js"></script>
+  <script src="js/data/modules-2.js"></script>
+  <script src="js/data/modules-3.js"></script>
+  <script src="js/data/questions-1.js"></script>
+  <script src="js/data/questions-2.js"></script>
+  <script src="js/data/questions-3.js"></script>
+  <script src="js/data/tips.js"></script>
+  <script src="js/data/redacao.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/auth.js"></script>
+</body>
+</html>

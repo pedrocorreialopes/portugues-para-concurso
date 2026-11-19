@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulados gratuitos — Português para Concursos</title>
+  <meta name="description" content="Monte simulados gratuitos de Língua Portuguesa: 5 a 100 questões, por nível, assunto ou formato. Cronômetro, marcação para revisão, correção com gráficos e comentários.">
+  <meta name="theme-color" content="#0b2545">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="siteHeader"></div>
+
+  <main id="conteudo">
+    <section class="section" style="padding-bottom:1.4rem">
+      <div class="container">
+        <nav aria-label="Trilha de navegação" style="font-size:.84rem;color:var(--muted);margin-bottom:.8rem">
+          <a href="index.html">Início</a> <span aria-hidden="true">›</span> <span>Simulados</span>
+        </nav>
+        <div class="section-head" style="max-width:none">
+          <span class="eyebrow">Simulados gratuitos</span>
+          <h1>Monte seu simulado de Língua Portuguesa</h1>
+          <p class="lead">Escolha a quantidade de questões, o nível, os assuntos e o formato. O cronômetro registra o tempo; você pode marcar questões para revisão, voltar e avançar, e finalizar quando quiser. A correção mostra acertos, erros, aproveitamento, nota, gabarito e comentários.</p>
+        </div>
+
+        <div class="exam-shell" style="grid-template-columns:1fr 320px">
+          <form class="card" id="formSimulado" novalidate>
+            <h2 style="font-size:1.2rem">1. Quantidade de questões</h2>
+            <div class="grid grid-4" style="gap:.6rem;margin-bottom:1.4rem" id="qtdOpcoes"></div>
+
+            <h2 style="font-size:1.2rem;margin-top:1.6rem">2. Nível de dificuldade</h2>
+            <div class="field">
+              <select class="select" id="selNivel" aria-label="Nível de dificuldade">
+                <option value="misto">Nível misto (recomendado)</option>
+                <option value="facil">Somente fácil</option>
+                <option value="intermediario">Somente intermediário</option>
+                <option value="dificil">Somente difícil</option>
+              </select>
+            </div>
+
+            <h2 style="font-size:1.2rem;margin-top:1.6rem">3. Assuntos</h2>
+            <p class="muted" style="font-size:.86rem">Deixe tudo desmarcado para incluir todas as matérias.</p>
+            <div class="field">
+              <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.6rem">
+                <button class="chip" type="button" id="btnTodosAssuntos">Todas as matérias</button>
+                <button class="chip" type="button" id="btnNenhumAssunto">Nenhuma</button>
+              </div>
+              <div id="assuntosGrupos" style="max-height:290px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--radius-sm);padding:.7rem;background:var(--surface-2)"></div>
+            </div>
+
+            <h2 style="font-size:1.2rem;margin-top:1.6rem">4. Formato e concurso</h2>
+            <div class="form-grid">
+              <div class="field" style="margin-bottom:0">
+                <label for="selFormato">Formato das questões</label>
+                <select class="select" id="selFormato"><option value="">Todos os formatos</option></select>
+              </div>
+              <div class="field" style="margin-bottom:0">
+                <label for="selConcurso">Concurso</label>
+                <select class="select" id="selConcurso"><option value="">Todos</option></select>
+              </div>
+            </div>
+
+            <div class="btn-row" style="margin-top:1.6rem">
+              <button class="btn btn-primary btn-lg" type="submit" id="btnIniciar">Iniciar simulado</button>
+              <button class="btn btn-outline" type="reset" id="btnResetar">Restaurar padrão</button>
+            </div>
+          </form>
+
+          <aside class="exam-side">
+            <div class="card" style="margin-bottom:1rem">
+              <h3 style="font-size:1rem">Resumo da configuração</h3>
+              <div class="result-line"><span>Questões</span><strong id="resQtd">20</strong></div>
+              <div class="result-line"><span>Nível</span><strong id="resNivel">Misto</strong></div>
+              <div class="result-line"><span>Assuntos</span><strong id="resAssuntos">Todos</strong></div>
+              <div class="result-line"><span>Disponíveis</span><strong id="resDisp">—</strong></div>
+              <div class="result-line"><span>Tempo sugerido</span><strong id="resTempo">—</strong></div>
+              <p class="muted" style="font-size:.78rem;margin:.8rem 0 0">O tempo sugerido considera 1,5 minuto por questão. O cronômetro conta tempo real, sem limite.</p>
+            </div>
+            <div class="card" style="background:var(--surface-2)">
+              <h3 style="font-size:.95rem">Simulados recentes</h3>
+              <div id="historicoRecente" style="font-size:.86rem"></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Como funciona</span><h2>Recursos do simulado</h2></div>
+        <div class="grid grid-4">
+          <div class="card"><span class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg></span><h3 style="font-size:1rem">Cronômetro</h3><p style="font-size:.88rem;color:var(--muted);margin:0">Tempo real desde o início, exibido a cada segundo.</p></div>
+          <div class="card"><span class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4h9l-.8 3H19l-.8 4H5"/></svg></span><h3 style="font-size:1rem">Marcar para revisão</h3><p style="font-size:.88rem;color:var(--muted);margin:0">Sinalize questões duvidosas e volte a elas depois.</p></div>
+          <div class="card"><span class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></span><h3 style="font-size:1rem">Mapa de questões</h3><p style="font-size:.88rem;color:var(--muted);margin:0">Veja respondidas, pendentes e marcadas em um painel.</p></div>
+          <div class="card"><span class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><h3 style="font-size:1rem">Correção com gráficos</h3><p style="font-size:.88rem;color:var(--muted);margin:0">Aproveitamento, nota 0–100, gabarito e assuntos críticos.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="js/core.js"></script>
+  <script src="js/data/modules-1.js"></script>
+  <script src="js/data/modules-2.js"></script>
+  <script src="js/data/modules-3.js"></script>
+  <script src="js/data/questions-1.js"></script>
+  <script src="js/data/questions-2.js"></script>
+  <script src="js/data/questions-3.js"></script>
+  <script src="js/data/tips.js"></script>
+  <script src="js/data/redacao.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/simulados.js"></script>
+</body>
+</html>
